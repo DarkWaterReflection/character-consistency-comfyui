@@ -17,9 +17,9 @@ IP-Adapter FaceID injects facial identity at the model's cross-attention level f
 This was a deliberate second iteration. The first build used the standard IP-Adapter, which transferred the reference's entire composition and locked every output into the same frontal pose. Diagnosing that limitation and moving to the FaceID architecture is the core engineering decision of the project.
 
 
-\## Workflow Architecture
+## Workflow Architecture
 
-!\[Workflow Architecture](images/workflow\_diagram.png)
+![Workflow Architecture](images/workflow\_diagram.png)
 
 
 
