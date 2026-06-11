@@ -1,0 +1,20 @@
+# Model files — too large for GitHub, never commit these
+*.safetensors
+*.bin
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Note: the images/ folder is intentionally NOT ignored.
+# Result images (input.png, output_1.png, ...) should be committed.
