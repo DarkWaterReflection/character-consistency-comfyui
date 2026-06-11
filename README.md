@@ -16,7 +16,9 @@ IP-Adapter FaceID injects facial identity at the model's cross-attention level f
 
 This was a deliberate second iteration. The first build used the standard IP-Adapter, which transferred the reference's entire composition and locked every output into the same frontal pose. Diagnosing that limitation and moving to the FaceID architecture is the core engineering decision of the project.
 
-Workflow Architecture
+
+\## Workflow Architecture
+
 !\[Workflow Architecture](images/workflow\_diagram.png)
 
 
@@ -24,11 +26,13 @@ Workflow Architecture
 *The MODEL is the carrier: Checkpoint → Unified Loader FaceID → IPAdapter FaceID → KSampler. The face reference is converted to an identity vector by insightface and injected into the model. The text prompt independently controls pose, scene, and style.*
 
 
+
 Load Checkpoint ─MODEL──> Unified Loader FaceID ─MODEL──> IPAdapter FaceID ─MODEL──> KSampler ──> VAE Decode ──> Save
 
 (SD 1.5)                  │  (model+LoRA+insightface)        ▲                        ▲
 
 &#x20;                           └──────────IPADAPTER────────────────┤                        │
+
 
 
 Load Image (reference) ─────────────IMAGE────────────────────> IPAdapter FaceID          │
